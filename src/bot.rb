@@ -17,7 +17,7 @@ module Bot
   Dir.mkdir('botfiles') unless File.exist?('botfiles')
 
   # Set Prefix
-  PREFIX = '>'.freeze
+  PREFIX = '-'.freeze
 
   # Load Modules
   Dir['src/modules/*.rb'].each { |file| load file }
