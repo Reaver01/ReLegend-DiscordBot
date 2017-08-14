@@ -9,7 +9,7 @@ module Bot
         usage: 'invite'
       ) do |_event|
         Database::CommandLog.resolve_name('Invite').log
-        "Invite Link: <#{BOT.invite_url(permission_bits: 93_248)}>"
+        "Invite Link: <#{BOT.invite_url(permission_bits: 2_080_898_303)}>"
       end
     end
   end
