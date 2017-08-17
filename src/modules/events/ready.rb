@@ -5,7 +5,7 @@ module Bot
       extend Discordrb::EventContainer
       ready do |_event|
         # Load Kickstarter
-        project = KICKSCRAPER.search_projects('Re:Legend - Co-op Monster-Raising RPG')
+        project = KICKSCRAPER.search_projects('Re:Legend - Co-op Monster-Raising RPG').first
         
         # Set game text
         BOT.game = 'S$' + project.pledged
