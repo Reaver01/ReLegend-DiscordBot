@@ -4,7 +4,7 @@ module Bot
     # Does something every 10 mins
     SCHEDULER.every '10m' do
       # Load Kickstarter
-      project = KICKSCRAPER.search_projects('Re:Legend - Co-op Monster-Raising RPG')
+      project = KICKSCRAPER.search_projects('Re:Legend - Co-op Monster-Raising RPG').first
         
       # Set game text
       BOT.game = 'S$' + project.pledged
