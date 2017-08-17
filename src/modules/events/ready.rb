@@ -8,7 +8,7 @@ module Bot
         project = KICKSCRAPER.search_projects('Re:Legend - Co-op Monster-Raising RPG').first
         
         # Set game text
-        BOT.game = "S$#{project.pledged}"
+        BOT.game = "S$ #{project.pledged.to_nearest_i} pledged!"
 
         # Tell the console BOT is ready
         puts 'BOT Ready!'
