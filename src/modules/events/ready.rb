@@ -4,8 +4,11 @@ module Bot
     module Ready
       extend Discordrb::EventContainer
       ready do |_event|
+        # Load Kickstarter
+        project = KICKSCRAPER.search_projects('Re:Legend - Co-op Monster-Raising RPG')
+        
         # Set game text
-        BOT.game = 'with Ruby'
+        BOT.game = 'S$' + project.pledged
 
         # Tell the console BOT is ready
         puts 'BOT Ready!'
