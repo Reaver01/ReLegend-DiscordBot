@@ -7,7 +7,7 @@ module Bot
       project = KICKSCRAPER.search_projects('Re:Legend - Co-op Monster-Raising RPG').first
         
       # Set game text
-      BOT.game = 'S$' + project.pledged
+      BOT.game = "S$#{project.pledged}"
     end
 
     # Does something every 30 mins
