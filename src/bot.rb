@@ -3,6 +3,7 @@ require 'discordrb'
 require 'discordrb/data'
 require 'dotenv'
 require 'fileutils'
+require 'kickscraper'
 require 'rufus-scheduler'
 
 # The main bot module
