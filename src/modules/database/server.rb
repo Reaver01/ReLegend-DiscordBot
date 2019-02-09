@@ -4,7 +4,6 @@ module Bot
     class Server < Sequel::Model
       def self.resolve_id(id)
         find_or_create(server_id: id)
-        update(channel: id)
       end
 
       def toggle_welcome_message(id)
