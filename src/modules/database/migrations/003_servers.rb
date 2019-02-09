@@ -5,6 +5,7 @@ Sequel.migration do
       Integer :server_id
       TrueClass :has_welcome_message, default: false
       String :welcome_message, default: ''
+      Integer :channel
     end
   end
 

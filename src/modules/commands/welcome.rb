@@ -11,10 +11,10 @@ module Bot
         permission_message: 'Only an admin can use %name%'
       ) do |event|
         Database::CommandLog.resolve_name('Welcome').log
-        if Database::Server.resolve_id(event.server.id).toggle_welcome_message
-          'Users will now be sent a welcome message in general when joining.'
+        if Database::Server.resolve_id(event.server.id).toggle_welcome_message(event.channel.id)
+          'Users will now be sent a welcome message in this channel when joining.'
         else
-          'Users will no longer be sent a welcome message in general when joining.'
+          'Users will no longer be sent a welcome message in this server when joining.'
         end
       end
     end

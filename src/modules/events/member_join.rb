@@ -15,7 +15,7 @@ module Bot
           elsif event.user.username =~ /.*(twitch\.tv)/ || event.user.display_name =~ /.*(twitch\.tv)/
             event.server.ban(event.user)
           else
-            BOT.channel(event.server.id).send_message(event.user.mention + ' ' + Database::Server.resolve_id(event.server.id).welcome_message)
+            BOT.channel(Database::Server.resolve_id(event.server.id).channel).send_message(event.user.mention + ' ' + Database::Server.resolve_id(event.server.id).welcome_message)
           end
         end
       end
