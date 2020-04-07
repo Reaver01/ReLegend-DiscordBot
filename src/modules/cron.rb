@@ -1,15 +1,6 @@
 module Bot
   # Schedules Cron jobs https://crontab.guru/ for reference
   module Cron
-    # Does something every 10 mins
-    SCHEDULER.every '10m' do
-      # Load Kickstarter
-      project = KICKSCRAPER.search_projects('Re:Legend - Co-op Monster-Raising RPG').first
-        
-      # Set game text
-      BOT.game = "S$ #{project.pledged.to_i.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\1,').reverse} pledged!"
-    end
-
     # Does something every 30 mins
     SCHEDULER.every '30m' do
       # ...
